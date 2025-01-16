@@ -1,0 +1,87 @@
+{
+  "Home": {
+    "title": "Welcome to geti website"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "clients": "Clients",
+    "blog": "Blog & News",
+    "contact": "Contact"
+  },
+  "SearchBar": {
+    "placeholder": "Search"
+  },
+  "Hero": {
+    "golden east for trade & industry": "Golden East for Trade & Industry",
+    "manufacturing & polishing of aluminum profiles": "Manufacturing & Polishing of Aluminum Profiles",
+    "services": "Services",
+    "products": "Products"
+  },
+  "About section": {
+    "about the company": "About The Company",
+    "geti, short for golden east for trade & industry LLC": "Geti, short for Golden East for Trade & Industry LLC.",
+    "our clients consider us to be the leaders of the premium aluminum finishing industry in Egypt": "Our clients consider us to be the leaders of the premium aluminum finishing industry in Egypt.",
+    "this is due to geti's superior standards for quality and reliability": "This is due to Geti's superior standards for quality and reliability.",
+    "golden east is a limited liability company based in Cairo, Egypt": "Golden East is a limited liability company based in Cairo, Egypt.",
+    "we offer a range of high-quality aluminum manufacturing and finishing solutions for house appliances, shower enclosures, LED lighting and much more": "We offer a range of high-quality aluminum manufacturing and finishing solutions for house appliances, shower enclosures, LED lighting and much more.",
+    "our products are all over the market and we're proud to be the leaders of the anodizing industry in Egypt": "Our products are all over the market and we're proud to be the leaders of the anodizing industry in Egypt."
+  },
+  "Services section": {
+    "our services": "Our Services",
+    "forming and machining": "Forming and Machining",
+    "mechanical processing": "Mechanical Processing",
+    "chemical processing": "Chemical Processing"
+  },
+  "Products section": {
+    "products & applications": "Products & Applications",
+    "home appliances": "Home Appliances",
+    "shower enclosures": "Shower Enclosures",
+    "heat slinks": "Heat Slinks",
+    "interior design work": "Interior Design Work",
+    "our products can be found over a wide range of home appliances from kitchen stoves to refrigerators and microwaves": "Our products can be found over a wide range of home appliances from kitchen stoves to refrigerators and microwaves",
+    "read more": "Read More"
+  },
+  "Clients section": {
+    "our clients": "Our Clients"
+  },
+  "Footer": {
+    "golden east for trade & industry": "Golden East for Trade & Industry",
+    "manufacturing & polishing of aluminum profiles": "Manufacturing & Polishing of Aluminum Profiles",
+    "pages": "Pages",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "clients": "Clients",
+    "blog": "Blog & News",
+    "contact": "Contact",
+    "our services": "Our Services",
+    "forming and machining": "Forming and Machining",
+    "mechanical processing": "Mechanical Processing",
+    "chemical processing": "Chemical Processing",
+    "forming": "Forming",
+    "perforation": "Perforation",
+    "threading": "Threading",
+    "mechanical finishing": "Mechanical Finishing",
+    "sanding and polishing": "Sanding and Polishing",
+    "brushed finish": "Brushed Finish",
+    "anodizing": "Anodizing",
+    "matte finish": "Matte Finish",
+    "colored anodizing": "Colored Anodizing",
+    "products & applications": "Products & Applications",
+    "home appliances": "Home Appliances",
+    "shower enclosures": "Shower Enclosures",
+    "heat slinks": "Heat Slinks",
+    "interior design work": "Interior Design Work",
+    "location": "Location",
+    "head office address": "Head Office Address",
+    "2176 Zahraa Madinat Nasr Behind El-Sallab warehouses Nasr city - apartment no 4": "2176 Zahraa Madinat Nasr Behind El-Sallab warehouses Nasr city - Apartment No. 4",
+    "factory": "Factory",
+    "El-Shorouk industrial city El-Salam Al-Khanka desert road next to the security forces training center": "El-Shorouk Industrial City El-Salam Al-Khanka Desert Road Next to the Security Forces Training Center",    "contact info": "Contact Info",
+    "phone": "Phone",
+    "email": "Email"
+  }
+}

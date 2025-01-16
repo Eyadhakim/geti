@@ -1,0 +1,88 @@
+{
+  "Home": {
+    "title": "مرحبا في موقع جيتي"
+  },
+  "Navigation": {
+    "home": "الرئيسية",
+    "about": "عن الشركة",
+    "services": "الخدمات",
+    "products": "المنتجات",
+    "clients": "العملاء",
+    "blog": "المدونة والأخبار",
+    "contact": "تواصل معنا"
+  },
+  "SearchBar": {
+    "placeholder": "بحث"
+  },
+  "Hero": {
+    "golden east for trade & industry": "الشرق الذهبي للتجارة والصناعة",
+    "manufacturing & polishing of aluminum profiles": "تصنيع وتلميع قطاعات الألمنيوم",
+    "services": "الخدمات",
+    "products": "المنتجات"
+  },
+  "About section": {
+    "about the company": "عن الشركة",
+    "geti, short for golden east for trade & industry LLC": "Geti (بالإنجليزية) هي اختصار ل \"الشرق الذهبي للتجارة والصناعة\" ذ.م.م.",
+    "our clients consider us to be the leaders of the premium aluminum finishing industry in Egypt": "يعتبرنا عملاؤنا رواد صناعة تشطيبات الألومنيوم المتميزة في مصر.",
+    "this is due to geti's superior standards for quality and reliability": "ويرجع ذلك إلى معايير جيتي الفائقة للجودة والموثوقية.",
+    "golden east is a limited liability company based in Cairo, Egypt": "جولدن إيست هي شركة ذات مسؤولية محدودة مقرها في القاهرة، مصر.",
+    "we offer a range of high-quality aluminum manufacturing and finishing solutions for house appliances, shower enclosures, LED lighting and much more": "نحن نقدم مجموعة من حلول تصنيع وتشطيب الألمنيوم عالية الجودة للأجهزة المنزلية وكبائن الاستحمام وإضاءة الليد وغير ذلك الكثير.",
+    "our products are all over the market and we're proud to be the leaders of the anodizing industry in Egypt": "منتجاتنا منتشرة في جميع أنحاء السوق ونحن فخورون بكوننا رواد صناعة الأنودة في مصر."
+  },
+  "Services section": {
+    "our services": "خدماتنا",
+    "forming and machining": "التشكيل والتشغيل",
+    "mechanical processing": "المعالجة الميكانيكية",
+    "chemical processing": "المعالجة الكيميائية"
+  },
+  "Products section": {
+    "products & applications": "المنتجات والتطبيقات",
+    "home appliances": "الأجهزة المنزلية",
+    "shower enclosures": "كبائن الاستحمام",
+    "heat slinks": "مبردات الحرارة",
+    "interior design work": "أعمال الديكور",
+    "our products can be found over a wide range of home appliances from kitchen stoves to refrigerators and microwaves": "يمكن العثور على منتجاتنا عبر مجموعة واسعة من الأجهزة المنزلية بدءًا من مواقد المطبخ وحتى الثلاجات وأجهزة الميكروويف",
+    "read more": "قراءة المزيد"
+  },
+  "Clients section": {
+    "our clients": "عملاؤنا"
+  },
+  "Footer": {
+    "golden east for trade & industry": "الشرق الذهبي للتجارة والصناعة",
+    "manufacturing & polishing of aluminum profiles": "تصنيع وتلميع قطاعات الألمنيوم",
+    "pages": "الصفحات",
+    "home": "الرئيسية",
+    "about": "عن الشركة",
+    "services": "الخدمات",
+    "products": "المنتجات",
+    "clients": "العملاء",
+    "blog": "المدونة والأخبار",
+    "contact": "تواصل معنا",
+    "our services": "خدماتنا",
+    "forming and machining": "التشكيل والتشغيل",
+    "mechanical processing": "المعالجة الميكانيكية",
+    "chemical processing": "المعالجة الكيميائية",
+    "forming": "التشكيل",
+    "perforation": "التخريم",
+    "threading": "القلوظة",
+    "mechanical finishing": "التشطيب الميكانيكي",
+    "sanding and polishing": "الصنفرة والتلميع",
+    "brushed finish": "التشطيب المخربش",
+    "anodizing": "الأنودة",
+    "matte finish": "التشطيب المط",
+    "colored anodizing": "الأنودة الملونة",
+    "products & applications": "المنتجات والتطبيقات",
+    "home appliances": "الأجهزة المنزلية",
+    "shower enclosures": "كبائن الاستحمام",
+    "heat slinks": "مبردات الحرارة",
+    "interior design work": "أعمال الديكور",
+    "location": "العنوان",
+    "head office address": "عنوان المقر الرئيسي",
+    "2176 Zahraa Madinat Nasr Behind El-Sallab warehouses Nasr city - apartment no 4": "2176 شارع الزهراء مدينة نصر خلف مخازن السلاب - شقة رقم 4",
+    "factory": "Factory",
+    "El-Shorouk industrial city El-Salam Al-Khanka desert road next to the security forces training center": "مدينة الشروق الصناعية السلام طريق الخانكة الصحراوي بجوار مركز تدريب قوات الأمن",
+    "contact info": "معلومات التواصل",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني"
+  }
+}
