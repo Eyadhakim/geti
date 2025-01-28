@@ -1,7 +1,4 @@
 {
-  "Home": {
-    "title": "Welcome to geti website"
-  },
   "Navigation": {
     "home": "Home",
     "about": "About",
@@ -9,42 +6,40 @@
     "products": "Products",
     "clients": "Clients",
     "blog": "Blog & News",
-    "contact": "Contact"
+    "contact": "Contact",
+    "dashboard": "Dashboard",
+    "certifications": "Certifications",
+    "gallery": "Gallery",
+    "add product": "Add Product",
+    "add category": "Add Category"
   },
   "SearchBar": {
     "placeholder": "Search"
   },
-  "Hero": {
+  "Home": {
+    "title": "Welcome to geti website",
     "golden east for trade & industry": "Golden East for Trade & Industry",
     "manufacturing & polishing of aluminum profiles": "Manufacturing & Polishing of Aluminum Profiles",
     "services": "Services",
-    "products": "Products"
-  },
-  "About section": {
+    "products": "Products",
     "about the company": "About The Company",
     "geti, short for golden east for trade & industry LLC": "Geti, short for Golden East for Trade & Industry LLC.",
     "our clients consider us to be the leaders of the premium aluminum finishing industry in Egypt": "Our clients consider us to be the leaders of the premium aluminum finishing industry in Egypt.",
     "this is due to geti's superior standards for quality and reliability": "This is due to Geti's superior standards for quality and reliability.",
     "golden east is a limited liability company based in Cairo, Egypt": "Golden East is a limited liability company based in Cairo, Egypt.",
     "we offer a range of high-quality aluminum manufacturing and finishing solutions for house appliances, shower enclosures, LED lighting and much more": "We offer a range of high-quality aluminum manufacturing and finishing solutions for house appliances, shower enclosures, LED lighting and much more.",
-    "our products are all over the market and we're proud to be the leaders of the anodizing industry in Egypt": "Our products are all over the market and we're proud to be the leaders of the anodizing industry in Egypt."
-  },
-  "Services section": {
+    "our products are all over the market and we're proud to be the leaders of the anodizing industry in Egypt": "Our products are all over the market and we're proud to be the leaders of the anodizing industry in Egypt.",
     "our services": "Our Services",
     "forming and machining": "Forming and Machining",
     "mechanical processing": "Mechanical Processing",
-    "chemical processing": "Chemical Processing"
-  },
-  "Products section": {
+    "chemical processing": "Chemical Processing",
     "products & applications": "Products & Applications",
     "home appliances": "Home Appliances",
     "shower enclosures": "Shower Enclosures",
     "heat slinks": "Heat Slinks",
     "interior design work": "Interior Design Work",
     "our products can be found over a wide range of home appliances from kitchen stoves to refrigerators and microwaves": "Our products can be found over a wide range of home appliances from kitchen stoves to refrigerators and microwaves",
-    "read more": "Read More"
-  },
-  "Clients section": {
+    "read more": "Read More",
     "our clients": "Our Clients"
   },
   "Footer": {
@@ -82,6 +77,87 @@
     "factory": "Factory",
     "El-Shorouk industrial city El-Salam Al-Khanka desert road next to the security forces training center": "El-Shorouk Industrial City El-Salam Al-Khanka Desert Road Next to the Security Forces Training Center",    "contact info": "Contact Info",
     "phone": "Phone",
-    "email": "Email"
+    "email": "Email",
+    "all right reserved": "Golden East for Trade & Industry, All rights reserved",
+    "social media icons by": "Social Media Icons by"
+  },
+  "Not Found": {
+    "this page is not found": "THIS PAGE IS NOT FOUND",
+    "return to the home page": "Return To The Home Page"
+  },
+  "Admin": {
+    "admin dashboard": "Admin Dashboard",
+    "enter your email": "Enter your Email",
+    "enter your password": "Enter your Password",
+    "sign in": "Sign In",
+    "invalid credentials": "Invalid Credentials",
+    "content management for": "Content management for",
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "services": "Services",
+    "clients": "Clients",
+    "blog": "Blog & News",
+    "gallery": "Gallery",
+    "certifications": "Certifications",
+    "categories": "Categories",
+    "products management": "Products management",
+    "services management": "Services management",
+    "clients management": "Clients management",
+    "blog management": "Blog management",
+    "gallery management": "Gallery management",
+    "certifications management": "Certifications management",
+    "add product": "Add Product",
+    "add category": "Add Category",
+    "add client": "Add Client",
+    "add image": "Add Image",
+    "add service": "Add Service",
+    "add article": "Add Article",
+    "add certification": "Add Certification",
+    "edit": "Edit",
+    "delete": "Delete",
+    "product name": "Product name",
+    "product description": "Product description",
+    "product images": "Upload product images here",
+    "category name": "Category name",
+    "category description": "Category description",
+    "category image": "Upload category image here",
+    "upload clients images here": "Upload clients logos here",
+    "upload images here": "Upload images here",
+    "upload card image here": "Upload card image here",
+    "upload article image here": "Upload article image here",
+    "upload certification here": "Upload Certification here",
+    "service title": "Service Title",
+    "service description": "Service Description",
+    "service cards": "Service Cards",
+    "card title": "Card Title",
+    "card description": "Card Description",
+    "article title": "Article Title",
+    "article content": "Article Content",
+    "certification name": "Certification Name",
+    "english": "English",
+    "arabic": "Arabic",
+    "product 360 degree image (optional)": "Product 360 degree image (optional)",
+    "submit": "Submit",
+    "submitting": "Submitting",
+    "update": "Update",
+    "updating": "Updating",
+    "cancel": "Cancel",
+    "successfully updated the data": "Successfully updated the data",
+    "invalid data": "Failed to update the data",
+    "server error": "Server Error",
+    "are you sure you want to delete these data": "Are you sure you want to delete these data?",
+    "no categories yet": "No Categories Yet",
+    "no products yet": "No Products Yet",
+    "no clients yet": "No Clients Yet",
+    "no images yet": "No Images Yet",
+    "no services yet": "No Services Yet",
+    "no posts yet": "No Posts Yet",
+    "no certifications yet": "No Certifications Yet",
+    "some images are already uploaded": "Some images are already uploaded!",
+    "some images are repeated": "Some images are repeated!",
+    "category": "Category",
+    "select product category": "Select product category",
+    "load more": "Load more",
+    "add": "Add"
   }
 }

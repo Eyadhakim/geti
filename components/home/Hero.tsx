@@ -3,12 +3,12 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function Hero() {
-  const t = useTranslations("Hero")
+  const t = useTranslations("Home")
 
   return (
-    <section className="relative h-[80vh] my-28 bg-slate-500 text-center">
+    <main className="relative h-[80vh] my-12 text-center">
       <Image
-        src="/hero.jpg"
+        src="/hero/hero.jpg"
         alt="hero image"
         fill
         objectFit="cover"
@@ -21,14 +21,14 @@ export default function Hero() {
           <p className="text-xl">{t("manufacturing & polishing of aluminum profiles")}</p>
         </div>
         <div className="max-w-96 gap-10 flex flex-wrap justify-center text-lg mx-2">
-          <button className="w-40 p-2 bg-main rounded hover:bg-transparent border-4 border-main" style={{transition: "0.5s"}}>
-            <Link href="/services" className="w-full h-full flex items-center justify-center">{t("services")}</Link>
-          </button>
-          <button className="w-40 p-2 rounded border-4 border-main hover:bg-main" style={{transition: "0.5s"}}>
-            <Link href="/products" className="w-full h-full flex items-center justify-center">{t("products")}</Link>
-          </button>
+          <Link href="#services" className="w-40 bg-main rounded hover:bg-transparent border-4 border-main" style={{transition: "0.5s"}}>
+            <button className="w-full h-full flex p-2 items-center justify-center">{t("services")}</button>
+          </Link>
+          <Link href="/products" className="w-40 rounded border-4 border-main hover:bg-main" style={{transition: "0.5s"}}>
+            <button className="w-full h-full flex p-2 items-center justify-center">{t("products")}</button>
+          </Link>
         </div>
       </div>
-    </section>
+    </main>
   )
 }

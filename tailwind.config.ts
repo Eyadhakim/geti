@@ -9,13 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        main: "var(--main)",
-        dark: "var(--main-dark)",
-        light: "var(--main-light)",
-        secondary: "var(--secondary)",
-        mainGray: "var(--gray)"
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        main: "hsl(var(--main))",
+        dark: "hsl(var(--main-dark))",
+        light: "hsl(var(--main-light))",
+        secondary: "hsl(var(--secondary))",
+        mainGray: "hsl(var(--gray))"
       },
     },
   },

@@ -1,21 +1,12 @@
-import fs from 'fs';
+"use client";
+
 import Image from 'next/image';
-import path from 'path';
 import { useTranslations } from 'next-intl';
-
-async function getImages() {
-  const imagesDirectory = path.join(process.cwd(), 'public', 'companies-logos');
-
-  const imageFiles = fs.readdirSync(imagesDirectory)
-    .filter(file => /\.(jpg|jpeg|png|webp|svg)$/.test(file));
-  
-  const images = imageFiles.map(file => path.join('/companies-logos', file));
-
-  return images;
-}
+import { useEffect, useState } from 'react';
+import { Client } from '@prisma/client';
 
 const Title = () => {
-  const t = useTranslations('Clients section')
+  const t = useTranslations('Home');
   return (
     <h1 className='text-5xl text-center text-main my-12 font-bold w-full'>
       {t("our clients")}
@@ -23,9 +14,19 @@ const Title = () => {
   )
 }
 
-const ClientLogos = async () => {
-  const images = await getImages()
+export default function ClientLogos() {
+  const [ images, setImages ] = useState<string[]>([]);
 
+  useEffect(() => {
+    const fetchClients = async () => {
+      const res = await fetch("/api/clients");
+      const data:Client[] = await res.json();
+      if (res.ok) setImages(data.map(c => c.logo));
+    }
+    fetchClients();
+    
+  }, [])
+  
   return (
     <section dir='ltr' className='overflow-hidden flex flex-col items-center justify-center my-40 py-5'>
       <Title/>
@@ -62,5 +63,3 @@ const ClientLogos = async () => {
     </section>
   );
 };
-
-export default ClientLogos;

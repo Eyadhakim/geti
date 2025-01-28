@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Card {
+  id           Int      @id @default(autoincrement())
+  key          String   @db.VarChar(255)
+  image        String   @db.VarChar(255)
+  title        String   @db.VarChar(255)
+  description  String   @db.Text
+  serviceId    Int
+  lang         String   @db.VarChar(255)
+  service      Service  @relation(fields: [serviceId], references: [id])
+}
+
+model Service {
+  id           Int      @id @default(autoincrement())
+  key          String   @db.VarChar(255)
+  title        String   @db.VarChar(255)
+  description  String   @db.Text
+  lang         String   @db.VarChar(255)
+  cards        Card[]
+}
+
+model ProductImage {
+  id           Int      @id @default(autoincrement())
+  url          String   @db.VarChar(255)
+  productId    Int
+  product      Product  @relation(fields: [productId], references: [id])
+}
+
+model Product {
+  id           Int      @id @default(autoincrement())
+  key          String   @db.VarChar(255)
+  title        String   @db.VarChar(255)
+  description  String   @db.Text
+  images       ProductImage[]
+  image360     String?  @db.VarChar(255)
+  lang         String   @db.VarChar(255)
+  categoryId   Int
+  category     Category @relation(fields: [categoryId], references: [id])
+}
+
+model Category {
+  id           Int      @id @default(autoincrement())
+  key          String   @db.VarChar(255)
+  name         String   @db.VarChar(255)
+  description  String   @db.Text
+  image        String   @db.VarChar(255)
+  lang         String   @db.VarChar(255)
+  products     Product[]
+}
+
+model Post {
+  id           Int      @id @default(autoincrement())
+  key          String   @db.VarChar(255)
+  title        String   @db.VarChar(255)
+  content      String   @db.Text
+  image        String   @db.VarChar(255)
+  lang         String   @db.VarChar(255)
+}
+
+model Certification {
+  id           Int      @id @default(autoincrement())
+  key          String   @db.VarChar(255)
+  name         String   @db.VarChar(255)
+  pdf          String   @db.VarChar(255)
+  lang         String   @db.VarChar(255)
+}
+
+model Client {
+  id           Int      @id @default(autoincrement())
+  logo         String   @db.VarChar(255)
+}
+
+model GalleryImage {
+  id           Int      @id @default(autoincrement())
+  image        String   @db.VarChar(255)
+}

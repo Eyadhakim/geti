@@ -1,11 +1,12 @@
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+import ServicesNames from "./small-units/ServicesNames";
 
 export default function ServicesSection() {
-  const t = useTranslations("Services section");
+  const t = useTranslations("Home");
 
   return (
-    <section className="flex items-center justify-center h-[500px] relative">
+    <section className="flex items-center justify-center h-[500px] relative" id="services">
         <div className="w-[calc(100vw/6)] relative h-full">
           <Image
             src="/services/2a.png"
@@ -64,9 +65,7 @@ export default function ServicesSection() {
             objectFit="cover"
           />
         </div>
-        <p>{t("forming and machining")}</p>
-        <p>{t("mechanical processing")}</p>
-        <p>{t("chemical processing")}</p>
+        <ServicesNames/>
       </div>
     </section>
   )

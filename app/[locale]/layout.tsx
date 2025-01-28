@@ -17,7 +17,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Golden east for trade and industry"
-}
+};
 
 const urbanist = localFont({
   src: [
@@ -46,6 +46,10 @@ const notoSansArabic = localFont({
   ],
   variable: "--noto-sans-arabic-font"
 })
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'ar' }];
+}
 
 export default async function LocaleLayout({
   children,

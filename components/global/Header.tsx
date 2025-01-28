@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from 'next-intl';
-import SearchBar from "../small-units/SearchBar";
-import LanguageSwitcher from "../small-units/LanguageSwitcher";
-import Navigation from "../small-units/Navigation";
+import SearchBar from "./small-units/SearchBar";
+import LanguageSwitcher from "./small-units/LanguageSwitcher";
+import Navigation from "./small-units/Navigation";
 
 export default function Header() {
   const locale = useLocale();
