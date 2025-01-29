@@ -34,7 +34,7 @@ export const POST = async (req: NextRequest) => {
     const bytes = await pdf.arrayBuffer();
     const buffer = Buffer.from(bytes);
     const path = join(process.cwd(), "public", "certifications", pdf.name);
-    await writeFile(path, buffer); 
+    await writeFile(path, buffer);
     const name:MultiLangString = JSON.parse(formName as string);
 
     await prisma.certification.createMany({
@@ -42,13 +42,13 @@ export const POST = async (req: NextRequest) => {
         {
           key: name.en,
           name: name.en,
-          pdf: `/certification/${pdf.name}`,
+          pdf: `/certifications/${pdf.name}`,
           lang: "en"
         },
         {
           key: name.en,
           name: name.ar,
-          pdf: `/certification/${pdf.name}`,
+          pdf: `/certifications/${pdf.name}`,
           lang: "ar"
         }
       ]

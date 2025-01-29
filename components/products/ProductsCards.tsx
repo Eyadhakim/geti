@@ -30,7 +30,7 @@ function ProductCard({ product, images, manage }: {
     }
   }
   return (
-    <div className="w-80 h-[500px] flex flex-col items-center justify-center text-center shadow gap-5 px-2">
+    <div className="w-80 h-[500px] flex flex-col items-center justify-center text-center shadow gap-5 px-2" id={product.key}>
       <ImagesSlider
         normalImages={images.map(image => image.url)}
         threeSixtyImage={product.image360}
@@ -60,7 +60,7 @@ function ProductCard({ product, images, manage }: {
             />
           </button>
         </div>:
-        <Link href={"/contact"}>
+        <Link href={`/contact?subject=Inquery About ${product.key}&text=Hello, Please send me more informations about ${product.key}`}>
           <button className="border-2 border-main px-5 py-2 m-5 rounded text-dark">{tHome("read more")}</button>
         </Link>
       }

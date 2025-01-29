@@ -3,14 +3,17 @@
 import { MultiLangString } from "@/interfaces/MultiLangString";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
-export default function CertificationForm() {
+export default function CertificationForm({ cKey }: { cKey?: string }) {
   const [name, setName] = useState<MultiLangString>({ ar: "", en: "" });
   const [pdf, setPdf] = useState<File | null>(null);
   const [pdfSrc, setPdfSrc] = useState<string | null>(null);
   const [uploadedPdf, setUploadedPdf] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
   const t = useTranslations("Admin");
+  const submitValue = loading? (cKey? `${t("updating")}...`: `${t("submitting")}...`): (cKey? t("update"): t("submit"))
+  const canSubmit = (pdf !== null && name.ar.trim().length !== 0 && name.en.trim().length !== 0)
 
   useEffect(
     () => {
@@ -21,8 +24,31 @@ export default function CertificationForm() {
     [pdf]
   );
 
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!canSubmit) return;
+    setLoading(true);
+    const data = new FormData();
+    data.set("name", JSON.stringify(name));
+    data.set("pdf", pdf);
+
+    const res = await fetch("/api/certifications", {
+      method: "POST",
+      body: data
+    });
+
+    if (res.ok) {
+      setName({ ar: "", en: "" });
+      setPdf(null);
+      setPdfSrc(null);
+      alert(t("successfully updated the data"))
+    }
+    else alert(t("invalid data"))
+    setLoading(false);
+  }
+
   return (
-    <form className="flex flex-col items-center justify-center w-full max-w-[1300px] px-5 my-20 gap-5">
+    <form className="flex flex-col items-center justify-center w-full max-w-[1300px] px-5 my-20 gap-5" onSubmit={handleSubmit}>
       <button type="button" onClick={() => {console.log(pdf, pdfSrc)}}>Click me</button>
       <div className="flex items-center justify-center gap-5 w-full max-sm:flex-wrap">
         <input
@@ -77,11 +103,11 @@ export default function CertificationForm() {
               />
             </button>
             <div className="relative w-full h-full rounded-md overflow-hidden">
-              <iframe
-                src={pdfSrc}
-                onLoad={() => URL.revokeObjectURL(pdfSrc)}
-                width={"100%"}
-                height={"100%"}
+              <Image
+                src="/icons/pdf.svg"
+                alt={"pdf"}
+                fill
+                objectFit="cover"
               />
             </div>
           </div>}
@@ -106,14 +132,20 @@ export default function CertificationForm() {
             </button>
             <div className="relative w-full h-full rounded-md overflow-hidden">
               <Image
-                src={uploadedPdf}
-                alt={"Category Image"}
+                src="/icons/pdf.svg"
+                alt={"pdf"}
                 fill
                 objectFit="cover"
               />
             </div>
           </div>}
       </div>
+      <input 
+        type="submit" 
+        value={submitValue}
+        className="w-full bg-main text-background hover:bg-main/80 text-lg p-4 rounded-md cursor-pointer disabled:bg-main/60 disabled:cursor-not-allowed"
+        disabled={loading || !canSubmit}
+      />
     </form>
   );
 }

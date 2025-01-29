@@ -22,7 +22,7 @@ export default function Categories() {
     <div>
       <ul className="flex gap-2 items-center justify-center flex-wrap my-10">
         {categories.map(category => (
-          <li key={category.id}>
+          <li key={category.id} id={category.key}>
             <Link href={`/products?category=${category.key}`} className={`${categoryQuery === category.key ? 'text-main': 'text-foreground'} block p-3 rounded-full shadow-mainGray shadow`}>
               {category.name}
             </Link>

@@ -26,7 +26,7 @@ export default function Product({ category, manage }: { category: Category, mana
 
   if (category.image && category.name && category.description) {
     return (
-      <div className="w-80 h-[500px] shadow flex flex-col items-center text-center gap-5 px-2">
+      <div className="w-80 h-[500px] shadow flex flex-col items-center text-center gap-5 px-2" id={category.key}>
         <div className="relative w-full h-80">
           <Image
             src={category.image}

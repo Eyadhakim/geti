@@ -14,7 +14,8 @@
     "add category": "Add Category"
   },
   "SearchBar": {
-    "placeholder": "Search"
+    "placeholder": "Search",
+    "no results": "No results"
   },
   "Home": {
     "title": "Welcome to geti website",
@@ -41,6 +42,35 @@
     "our products can be found over a wide range of home appliances from kitchen stoves to refrigerators and microwaves": "Our products can be found over a wide range of home appliances from kitchen stoves to refrigerators and microwaves",
     "read more": "Read More",
     "our clients": "Our Clients"
+  },
+  "Contact": {
+    "contact us": "Contact Us",
+    "name": "Name",
+    "subject": "Subject",
+    "your message": "Enter your message here",
+    "submit": "Submit"
+  },
+  "About": {
+    "about": "About The Company",
+    "who are we": "Who Are We?",
+    "geti abbreviation": "GETI is abbreviation for \"Golden East for Trade and Industry\"",
+    "our clients consider us": "Our clients consider us to be the leaders of the premium aluminum finishing industry in Egypt. This is due to Geti's superior standards for quality and reliability",
+    "overview": "Company overview",
+    "golden east is llc": "Golden East is a private limited liability company LLC based in Cairo, Egypt",
+    "we offer a range": "We offer a range of high-quality aluminum manufacturing and finishing solutions for house appliances, shower enclosures, furniture, LED lighting and much more",
+    "our mission": "Our mission",
+    "our vision": "Our vision",
+    "our values": "Our values",
+    "mission paragraph": "We will keep developing and innovating to find and satisfy new applications for our products, sustaining the market of Aluminum profiles in Egypt and we shall maintain and improve our quality and credibility in order to attract new businesses to collaborate with us, either locally or globally",
+    "vision paragraph": "To completely cover the market shortage for premium aluminum profiles and eliminate the need to import aluminum profiles into Egypt Then to expand into different countries and continents to prove that the Egyptian industry is more than capable of providing premium products in all industries",
+    "quality": "Quality",
+    "quality paragraph": "We uphold the highest global standards and keep pushing the bar further and further",
+    "commitment and honesty": "Commitment & Honesty",
+    "commitment paragraph": "Staying true to our standards and deadlines as well as upholding the intellectual property of our clients",
+    "learning": "Learning",
+    "learning paragraph": "Nobody knows everything. Successful businesses are built on a foundation of humility and ongoing learning, we follow suit",
+    "development": "Development",
+    "development paragraph": "We’re always working on the development of production processes and quality standards"
   },
   "Footer": {
     "golden east for trade & industry": "Golden East for Trade & Industry",

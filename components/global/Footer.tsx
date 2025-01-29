@@ -132,8 +132,8 @@ export default function Footer() {
         <div>
           <p className="text-start text-xl font-bold">{t("email")}</p>
           <div>
-            <Link href="mailto:info@geti.com">
-              <p className="text-start text-lg">info@geti.com</p>
+            <Link href="mailto:info@geti-alu.com">
+              <p className="text-start text-lg">info@geti-alu.com</p>
             </Link>
           </div>
         </div>
