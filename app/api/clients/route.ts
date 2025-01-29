@@ -7,8 +7,7 @@ export const GET = async () => {
   try {
     const clients = await prisma.client.findMany();
     return NextResponse.json(clients, { status: 200 });
-  } catch (e) {
-    console.log(e)
+  } catch {
     return NextResponse.json({ message: "Server Error" }, { status: 500 });
   }
 }

@@ -56,7 +56,6 @@ export default function Clients() {
 
   const handleDelete = async () => {
     if (!selectedClient) return;
-    console.log(selectedClient);
     const res = await fetch(`/api/clients/${selectedClient.id}`, {
       method: "DELETE"
     });

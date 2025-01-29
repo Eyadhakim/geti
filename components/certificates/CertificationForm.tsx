@@ -49,7 +49,6 @@ export default function CertificationForm({ cKey }: { cKey?: string }) {
 
   return (
     <form className="flex flex-col items-center justify-center w-full max-w-[1300px] px-5 my-20 gap-5" onSubmit={handleSubmit}>
-      <button type="button" onClick={() => {console.log(pdf, pdfSrc)}}>Click me</button>
       <div className="flex items-center justify-center gap-5 w-full max-sm:flex-wrap">
         <input
           className="bg-gray-100 w-full p-4 text-start outline-none rounded-md"

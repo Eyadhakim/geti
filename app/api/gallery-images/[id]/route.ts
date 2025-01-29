@@ -13,8 +13,7 @@ export const DELETE = async (req: Request, { params }: { params: Promise<{ id: s
     });
 
     return NextResponse.json({ message: "Success" }, { status: 200 })
-  } catch (e) {
-    console.log(e)
+  } catch {
     return NextResponse.json({ message: "Server Error" }, { status: 500 })
   }
 }

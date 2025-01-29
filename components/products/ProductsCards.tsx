@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import ImagesSlider from "./small-units/ImagesSlider"
 import { Link } from "@/i18n/routing"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 import { Product, ProductImage } from "@prisma/client"
 import Image from "next/image"
 import DeleteModal from "../dashboard/DeleteModal"
@@ -75,7 +75,6 @@ function ProductCard({ product, images, manage }: {
 }
 
 export default function ProductsCards({ manage }: { manage?: boolean }) {
-  const locale = useLocale();
   const [ prodcuts, setProducts ] = useState<Product[]>([]);
   const [ images, setImages ] = useState<ProductImage[]>([]);
   const t = useTranslations("Admin");
@@ -86,12 +85,12 @@ export default function ProductsCards({ manage }: { manage?: boolean }) {
       const res = await fetch(`/api/products${category? `?category=${category}`: ""}`);
       if (res.ok) {
         const data = await res.json();
-        setProducts(data.products);
-        setImages(data.images);
-      }
+        setProducts(Array.from(data.products));
+        setImages(Array.from(data.images));
+      } return
     }
     fetchData()
-  }, [locale, category]);
+  }, [category]);
   
 
   return (

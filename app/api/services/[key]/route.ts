@@ -76,8 +76,6 @@ export const PATCH = async (req: NextRequest, { params }: { params: Promise<{ ke
         image: images[index]
       })
     });
-    console.log(data, cards)
-
     const title: MultiLangString = JSON.parse(formTitle as string);
     const description: MultiLangString = JSON.parse(formDescription as string);
 

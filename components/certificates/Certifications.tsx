@@ -57,7 +57,7 @@ export default function Certifications({ manage }: { manage?: boolean }) {
 
   const handleDelete = async () => {
     if (!selectedCertification) return;
-    console.log(selectedCertification);
+    (selectedCertification);
     const res = await fetch(`/api/certifications/${selectedCertification.key}`, {
       method: "DELETE"
     });
