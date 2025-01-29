@@ -42,7 +42,7 @@ export default function Posts({ manage }: { manage?: boolean }) {
         { manage?
         <div className="w-full max-w-[1300px] flex items-center justify-center flex-wrap my-20 gap-5">
           {posts.length !== 0
-            ? posts.map(post =>
+            ? Array.from(posts).map(post =>
                 <div
                   key={post.id}
                   className="w-full max-w-96 h-96 flex flex-col justify-between border shadow rounded-md overflow-hidden"
@@ -101,7 +101,7 @@ export default function Posts({ manage }: { manage?: boolean }) {
         </div>:
         <div className="w-full max-w-[1300px] flex items-center justify-center flex-wrap my-20 gap-5">
         {posts.length !== 0
-          ? posts.map(post =>
+          ? Array.from(posts).map(post =>
               <Link
                 key={post.id}
                 href={`/blog/${post.key}`}
