@@ -18,8 +18,8 @@ export default function CategoryForm({ categoryKey }: { categoryKey?: string }) 
   const submitValue = categoryKey? (loading? `${t("updating")}...`: `${t("update")}`): (loading? `${t("submitting")}...`: t("submit"))
 
   useEffect(() => {
+    if (!categoryKey) return;
     const fetchCategory = async () => {
-      if (!categoryKey) return;
       try {
         const res = await fetch(`/api/categories/${categoryKey}`);
 
@@ -38,47 +38,37 @@ export default function CategoryForm({ categoryKey }: { categoryKey?: string }) 
     }
     fetchCategory();
   }, [categoryKey])
-
-  useEffect(() => {
-    if (!image) return;
-    const src = URL.createObjectURL(image);
-    setImageSrc(src);
-  }, [image])
-  
-
   
   const handleAddSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (name.ar.trim().length === 0 || description.ar.trim().length === 0 || name.en.trim().length === 0 || description.en.trim().length === 0 || !image) return;
+    if (!canSubmit || !image) return;
 
-    try {
       setLoading(true);
       const data = new FormData();
       data.set("image", image);
       data.set("name", JSON.stringify(name));
       data.set("description", JSON.stringify(description));
 
-      const res = await fetch("/api/categories", {
+      await fetch("/api/categories", {
         method: "POST",
         body: data
-      });
-
-      if (res.ok) {
-        alert(t("successfully updated the data"));
-        setImage(null);
-        setImageSrc(null);
-        setUploadedImage(null);
-        setName({ar: "", en: ""});
-        setDescription({ar: "", en: ""});
+      }).then((res) => {
+        if (res.ok) {
+          setImage(null);
+          setImageSrc(null);
+          setUploadedImage(null);
+          setName({ar: "", en: ""});
+          setDescription({ar: "", en: ""});
+          setLoading(false);
+          alert(t("successfully updated the data"));
+        } else {
+          setLoading(false)
+          alert (t("invalid data"));
+        }
+      }).catch(() => {
         setLoading(false);
-      } else {
-        alert (t("invalid data"));
-        setLoading(false)
-      }
-    } catch {
-      alert(t("server error"));
-      setLoading(false);
-    }
+        alert(t("server error"));
+      });
   }
 
   const handleEditSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -145,7 +135,13 @@ export default function CategoryForm({ categoryKey }: { categoryKey?: string }) 
           id="file-upload"
           accept="image/*"
           className="hidden"
-          onChange={(e) => setImage(e.target.files![0])}
+          onChange={(e) => {
+            if (!e.target.files) return
+            const file = e.target.files[0];
+            setImage(file);
+            const src = URL.createObjectURL(file);
+            setImageSrc(src);
+          }}
         />
       </div>
         

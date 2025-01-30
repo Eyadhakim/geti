@@ -12,7 +12,6 @@ export const POST = async (req: NextRequest) => {
   const formDescription = data.get("description");
 
   try {
-    if (!image || !formName || !formDescription) return NextResponse.json({ message: "Invalid Data" }, { status: 400 });
     const bytes = await image.arrayBuffer();
     const buffer = Buffer.from(bytes);
     const fileName = image.name;
@@ -22,31 +21,31 @@ export const POST = async (req: NextRequest) => {
     const name:MultiLangString = JSON.parse(formName as string);
     const description:MultiLangString = JSON.parse(formDescription as string);
 
-    await prisma.category.create({
-      data: {
-        name: name.en,
-        description: description.en,
-        image: `/images/${fileName}`,
-        key: name.en,
-        lang: "en",
-      }
-    }).then(async () => {
-      await prisma.category.create({
-        data: {
+    await prisma.category.createMany({
+      data: [
+        {
           name: name.ar,
           description: description.ar,
           image: `/images/${fileName}`,
           key: name.en,
-          lang: "ar",
+          lang: "ar"
+        },
+        {
+          name: name.en,
+          description: description.en,
+          image: `/images/${fileName}`,
+          key: name.en,
+          lang: "en"
         }
-      })
-    }).then(async () => {
-      await prisma.$disconnect();
+      ]
     });
-
-    return NextResponse.json({ message: "Success" }, { status: 200 });
-  } catch {
+  
+      
     await prisma.$disconnect();
+    return NextResponse.json({ message: "Success" }, { status: 200 });
+  } catch (e) {
+    await prisma.$disconnect();
+    console.log(e)
     return NextResponse.json({ message: "Server Error" }, { status: 500 })
   }
 }
