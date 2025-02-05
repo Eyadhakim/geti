@@ -9,7 +9,7 @@ import {  useState } from "react";
 export default function GalleryImages({ manage }: { manage?: boolean }) {
   const t = useTranslations("Admin");
 
-  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([
+  const galleryImages = [
     {
       id: 1,
       image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
@@ -26,7 +26,7 @@ export default function GalleryImages({ manage }: { manage?: boolean }) {
       id: 1,
       image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
     },
-  ]);
+  ];
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [addModal, setAddModal] = useState<boolean>(false);
   const [deleteModal, setDeleteModal] = useState<boolean>(false);
