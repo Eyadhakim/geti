@@ -1,11 +1,9 @@
 "use client"
 
 import { Link } from "@/i18n/routing"
-import { Service } from "@prisma/client"
-import { useEffect, useState } from "react"
 
 export default function ServicesNames() {
-  const [ services, setServices ] = useState<Service[]>([
+  const services = [
     {
       id: 1,
       title: "Service",
@@ -27,7 +25,7 @@ export default function ServicesNames() {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
       lang: "ar",
     }
-  ])  
+  ]
 
   return (
     <div className="flex flex-col items-center justify-center gap-2">

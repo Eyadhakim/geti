@@ -1,13 +1,11 @@
 "use client"
 
 import Title from "@/components/global/Title";
-import { Client } from "@prisma/client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState } from "react"
 
 export default function Clients() {
-  const [ images, setImages ] = useState<string[]>([
+  const images = [
     "/images/ideal.png",
     "/images/kiriazi.png",
     "/images/ideal.png",
@@ -18,7 +16,7 @@ export default function Clients() {
     "/images/kiriazi.png",
     "/images/ideal.png",
     "/images/kiriazi.png",
-  ]);
+  ];
   const t = useTranslations("Navigation")
   
 

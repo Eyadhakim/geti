@@ -2,8 +2,6 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
-import { Client } from '@prisma/client';
 
 const Title = () => {
   const t = useTranslations('Home');
@@ -15,7 +13,7 @@ const Title = () => {
 }
 
 export default function ClientLogos() {
-  const [ images, setImages ] = useState<string[]>([
+  const images = [
     "/images/ideal.png",
     "/images/kiriazi.png",
     "/images/ideal.png",
@@ -26,7 +24,7 @@ export default function ClientLogos() {
     "/images/kiriazi.png",
     "/images/ideal.png",
     "/images/kiriazi.png",
-  ]);
+  ];
   
   return (
     <section dir='ltr' className='overflow-hidden flex flex-col items-center justify-center my-40 py-5'>

@@ -5,12 +5,11 @@ import { useTranslations } from "next-intl";
 import MenuModal from "./MenuModal";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { Service } from "@prisma/client";
 
 export default function Navigation() {
   const t = useTranslations("Navigation");
   const pathname = usePathname();
-  const [ services, setServices ] = useState<Service[]>([
+  const services = [
     {
       id: 1,
       title: "Service",
@@ -32,7 +31,7 @@ export default function Navigation() {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
       lang: "ar",
     }
-  ]);
+  ];
   const servicesPages = useRef<HTMLDivElement>(null);
   const [ isAdmin, setIsAdmin ] = useState(false);
 

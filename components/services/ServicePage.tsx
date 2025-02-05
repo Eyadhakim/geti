@@ -1,14 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Title from "../global/Title";
-import { Card, Service } from "@prisma/client";
-import { notFound } from "next/navigation";
-import Loading from "@/app/[locale]/loading";
 import Image from "next/image";
 
 export default function ServicePage({ serviceKey }: { serviceKey: string }) {
-  const [service, setService] = useState<(Service & { cards: Card[] })>(
+  const service = 
     {
       id: 1,
       title: "Service",
@@ -62,8 +58,7 @@ export default function ServicePage({ serviceKey }: { serviceKey: string }) {
           lang: "ar"
         }
       ]
-    }
-  );
+    };
 
 
 

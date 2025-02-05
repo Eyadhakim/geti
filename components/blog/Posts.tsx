@@ -5,13 +5,13 @@ import { Link } from "@/i18n/routing";
 import { Post } from "@prisma/client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DeleteModal from "../dashboard/DeleteModal";
 
 export default function Posts({ manage }: { manage?: boolean }) {
   const t = useTranslations("Navigation");
   const tAdmin = useTranslations("Admin");
-  const [posts, setPosts] = useState<Post[]>([
+  const posts = [
     {
       id: 1,
       key: "Post",
@@ -44,7 +44,7 @@ export default function Posts({ manage }: { manage?: boolean }) {
       lang: "ar",
       image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
     },
-]);
+];
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
   const [deletionModal, setDeletionModal] = useState<boolean>(false);
 

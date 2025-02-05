@@ -1,14 +1,9 @@
 "use client"
 
-import Loading from "@/app/[locale]/loading";
-import { Post } from "@prisma/client"
-import { notFound } from "next/navigation";
-import { useEffect, useState } from "react"
 import Content from "./small-units/Content";
 
 export default function Article() {
-  const [article, setArticle] = useState<Post|null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+
 
   return (
     <div className="w-full">
