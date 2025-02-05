@@ -10,7 +10,29 @@ import { Service } from "@prisma/client";
 export default function Navigation() {
   const t = useTranslations("Navigation");
   const pathname = usePathname();
-  const [ services, setServices ] = useState<Service[]>([]);
+  const [ services, setServices ] = useState<Service[]>([
+    {
+      id: 1,
+      title: "Service",
+      key: "Service",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+      lang: "ar",
+    },
+    {
+      id: 2,
+      title: "Service",
+      key: "Service",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+      lang: "ar",
+    },
+    {
+      id: 3,
+      title: "Service",
+      key: "Service",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+      lang: "ar",
+    }
+  ]);
   const servicesPages = useRef<HTMLDivElement>(null);
   const [ isAdmin, setIsAdmin ] = useState(false);
 
@@ -25,14 +47,6 @@ export default function Navigation() {
     }
     verifyToken()
   }, [pathname]);
-
-  useEffect(() => {
-    const fetchServices = async () => {
-      const res = await fetch("/api/services");
-      if (res.ok) setServices(await res.json());
-    }
-    fetchServices()
-  }, []);
   
 
   return (

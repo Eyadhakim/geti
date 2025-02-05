@@ -4,12 +4,29 @@ import UploadedImages from "@/components/dashboard/small-units/UploadedImages";
 import { GalleryImage } from "@prisma/client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 export default function GalleryImages({ manage }: { manage?: boolean }) {
   const t = useTranslations("Admin");
 
-  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([]);
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([
+    {
+      id: 1,
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+    {
+      id: 1,
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+    {
+      id: 1,
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+    {
+      id: 1,
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+  ]);
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [addModal, setAddModal] = useState<boolean>(false);
   const [deleteModal, setDeleteModal] = useState<boolean>(false);
@@ -19,26 +36,6 @@ export default function GalleryImages({ manage }: { manage?: boolean }) {
   const [packs, setPacks] = useState<number>(1);
   const packLimit = 10;
 
-  useEffect(() => {
-    const fetchGalleryImages = async () => {
-      const res = await fetch("/api/gallery-images");
-      if (res.ok) setGalleryImages(await res.json());
-    };
-    fetchGalleryImages();
-  }, []);
-
-  useEffect(
-    () => {
-      if (images.length === 0) return;
-      const sources: string[] = [];
-      images.forEach(image => {
-        const src = URL.createObjectURL(image);
-        sources.push(src);
-      });
-      setImagesSources(sources);
-    },
-    [images]
-  );
 
   const handleSubmit = async () => {
     if (images.length === 0) return;

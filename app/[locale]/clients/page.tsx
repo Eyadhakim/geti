@@ -7,15 +7,18 @@ import Image from "next/image";
 import { useEffect, useState } from "react"
 
 export default function Clients() {
-  const [ images, setImages ] = useState<string[]>([]);
-  useEffect(() => {
-    const fetchClients = async () => {
-      const res = await fetch("/api/clients");
-      const data:Client[] = await res.json();
-      if (res.ok) setImages(data.map(c => c.logo));
-    }
-    fetchClients();
-  }, []);
+  const [ images, setImages ] = useState<string[]>([
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+  ]);
   const t = useTranslations("Navigation")
   
 

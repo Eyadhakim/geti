@@ -10,7 +10,36 @@ import { useEffect, useState } from "react";
 export default function Certifications({ manage }: { manage?: boolean }) {
   const t = useTranslations("Admin");
 
-  const [certifications, setCertifications] = useState<Certification[]>([]);
+  const [certifications, setCertifications] = useState<Certification[]>([
+    {
+      id: 1,
+      name: "Certification",
+      key: "Certification",
+      lang: "en",
+      pdf: "/certifications/GOLDEN-EAST-9001.pdf"
+    },
+    {
+      id: 1,
+      name: "Certification",
+      key: "Certification",
+      lang: "en",
+      pdf: "/certifications/GOLDEN-EAST-9001.pdf"
+    },
+    {
+      id: 1,
+      name: "Certification",
+      key: "Certification",
+      lang: "en",
+      pdf: "/certifications/GOLDEN-EAST-9001.pdf"
+    },
+    {
+      id: 1,
+      name: "Certification",
+      key: "Certification",
+      lang: "en",
+      pdf: "/certifications/GOLDEN-EAST-9001.pdf"
+    },
+  ]);
   const [selectedCertification, setSelectedCertification] = useState<Certification | null>(null);
   const [addModal, setAddModal] = useState<boolean>(false);
   const [deleteModal, setDeleteModal] = useState<boolean>(false);

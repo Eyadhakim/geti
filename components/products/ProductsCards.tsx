@@ -75,9 +75,9 @@ function ProductCard({ product, images, manage }: {
 }
 
 export default function ProductsCards({ manage }: { manage?: boolean }) {
-  const [ prodcuts, setProducts ] = useState<Product[]>([]);
-  const [ images, setImages ] = useState<ProductImage[]>([]);
-  const t = useTranslations("Admin");
+  // const [ products, setProducts ] = useState<Product[]>([]);
+  // const [ images, setImages ] = useState<ProductImage[]>([]);
+  // const t = useTranslations("Admin");
   const category = useSearchParams().get("category");
 
   useEffect(() => {
@@ -85,8 +85,9 @@ export default function ProductsCards({ manage }: { manage?: boolean }) {
       const res = await fetch(`/api/products${category? `?category=${category}`: ""}`);
       if (res.ok) {
         const data = await res.json();
-        setProducts(Array.from(data.products));
-        setImages(Array.from(data.images));
+        // setProducts(data.products);
+        // setImages(data.images);
+        console.log(data)
       } return
     }
     fetchData()
@@ -95,21 +96,75 @@ export default function ProductsCards({ manage }: { manage?: boolean }) {
 
   return (
     <div className="w-full flex items-center justify-center py-10">
-      {prodcuts.length !== 0? 
       <div className="w-1/2 min-w-fit flex flex-col items-center">
-        <div className="w-full flex flex-wrap items-center justify-center">
-          {prodcuts.map(product => (
+        <div className="w-full flex flex-wrap items-center justify-center gap-5 max-w-[1300px]">
             <ProductCard 
-              key={product.id}
-              product={product}
-              images={images.filter(image => image.productId === product.id)}
+              product= {
+                {id: 1,
+                key: "Product",
+                title: "Product",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat corporis, ipsum impedit sequi et nesciunt ea, cumque facere ratione modi provident velit saepe. At eaque repellat provident eveniet. Quis, ea?",
+                image360: "/images/360.jpg",
+                lang: "en",
+                categoryId: 1}
+              }
+              images={[{id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}]}
               manage={manage? true: false}
             />
-          ))}
+             <ProductCard 
+              product= {
+                {id: 1,
+                key: "Product",
+                title: "Product",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat corporis, ipsum impedit sequi et nesciunt ea, cumque facere ratione modi provident velit saepe. At eaque repellat provident eveniet. Quis, ea?",
+                image360: "/images/360.jpg",
+                lang: "en",
+                categoryId: 1}
+              }
+              images={[{id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}]}
+              manage={manage? true: false}
+            />
+             <ProductCard 
+              product= {
+                {id: 1,
+                key: "Product",
+                title: "Product",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat corporis, ipsum impedit sequi et nesciunt ea, cumque facere ratione modi provident velit saepe. At eaque repellat provident eveniet. Quis, ea?",
+                image360: "/images/360.jpg",
+                lang: "en",
+                categoryId: 1}
+              }
+              images={[{id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}]}
+              manage={manage? true: false}
+            />
+             <ProductCard 
+              product= {
+                {id: 1,
+                key: "Product",
+                title: "Product",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat corporis, ipsum impedit sequi et nesciunt ea, cumque facere ratione modi provident velit saepe. At eaque repellat provident eveniet. Quis, ea?",
+                image360: "/images/360.jpg",
+                lang: "en",
+                categoryId: 1}
+              }
+              images={[{id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}]}
+              manage={manage? true: false}
+            />
+             <ProductCard 
+              product= {
+                {id: 1,
+                key: "Product",
+                title: "Product",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat corporis, ipsum impedit sequi et nesciunt ea, cumque facere ratione modi provident velit saepe. At eaque repellat provident eveniet. Quis, ea?",
+                image360: "/images/360.jpg",
+                lang: "en",
+                categoryId: 1}
+              }
+              images={[{id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}, {id: 1, url: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg", productId: 1}]}
+              manage={manage? true: false}
+            />
         </div>
       </div>
-      : <p className="text-mainGray text-xl">{t("no products yet")}</p>
-      }
     </div>
   )
 }

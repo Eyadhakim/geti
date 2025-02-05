@@ -8,31 +8,64 @@ import Loading from "@/app/[locale]/loading";
 import Image from "next/image";
 
 export default function ServicePage({ serviceKey }: { serviceKey: string }) {
-  const [service, setService] = useState<(Service & { cards: Card[] }) | null>(
-    null
-  );
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(
-    () => {
-      const fetchService = async () => {
-        const res = await fetch(`/api/services/${serviceKey}`);
-        const data = await res.json();
-        if (res.ok) {
-          setService(data);
-          setLoading(false);
-        } else {
-          setLoading(false);
-          return notFound();
+  const [service, setService] = useState<(Service & { cards: Card[] })>(
+    {
+      id: 1,
+      title: "Service",
+      key: "Service",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+      lang: "ar",
+      cards: [
+        {
+          id: 1,
+          key: "Card",
+          title: "Card",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+          serviceId: 1,
+          image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg",
+          lang: "ar"
+        },
+        {
+          id: 1,
+          key: "Card",
+          title: "Card",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+          serviceId: 1,
+          image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg",
+          lang: "ar"
+        },
+        {
+          id: 1,
+          key: "Card",
+          title: "Card",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+          serviceId: 1,
+          image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg",
+          lang: "ar"
+        },
+        {
+          id: 1,
+          key: "Card",
+          title: "Card",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+          serviceId: 1,
+          image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg",
+          lang: "ar"
+        },
+        { 
+          id: 1,
+          key: "Card",
+          title: "Card",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta esse itaque magnam asperiores aliquid harum ullam at rerum, necessitatibus quasi. Consequuntur neque corrupti optio ab assumenda doloribus ducimus excepturi",
+          serviceId: 1,
+          image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg",
+          lang: "ar"
         }
-      };
-      fetchService();
-    },
-    [serviceKey]
+      ]
+    }
   );
 
-  if (loading) return <Loading />;
-  else if (!service) return notFound();
+
 
   return (
     <div className="w-full">

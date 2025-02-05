@@ -124,6 +124,6 @@ export const GET = async (req: NextRequest) => {
 
     return NextResponse.json({ products, images }, { status: 200 });
   } catch {
-    return NextResponse.json({ message: "Server Error" }, { status: 200 });
+    return NextResponse.json({ message: "Server Error" }, { status: 500 });
   }
 }

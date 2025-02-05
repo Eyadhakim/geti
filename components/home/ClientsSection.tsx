@@ -15,17 +15,18 @@ const Title = () => {
 }
 
 export default function ClientLogos() {
-  const [ images, setImages ] = useState<string[]>([]);
-
-  useEffect(() => {
-    const fetchClients = async () => {
-      const res = await fetch("/api/clients");
-      const data:Client[] = await res.json();
-      if (res.ok) setImages(data.map(c => c.logo));
-    }
-    fetchClients();
-    
-  }, [])
+  const [ images, setImages ] = useState<string[]>([
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+    "/images/ideal.png",
+    "/images/kiriazi.png",
+  ]);
   
   return (
     <section dir='ltr' className='overflow-hidden flex flex-col items-center justify-center my-40 py-5'>

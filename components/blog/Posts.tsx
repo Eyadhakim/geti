@@ -11,17 +11,42 @@ import DeleteModal from "../dashboard/DeleteModal";
 export default function Posts({ manage }: { manage?: boolean }) {
   const t = useTranslations("Navigation");
   const tAdmin = useTranslations("Admin");
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [posts, setPosts] = useState<Post[]>([
+    {
+      id: 1,
+      key: "Post",
+      title: "Post",
+      content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt.",
+      lang: "ar",
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+    {
+      id: 2,
+      key: "Post",
+      title: "Post",
+      content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt.",
+      lang: "ar",
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+    {
+      id: 3,
+      key: "Post",
+      title: "Post",
+      content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt.",
+      lang: "ar",
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+    {
+      id: 4,
+      key: "Post",
+      title: "Post",
+      content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, placeat. Error nihil soluta nostrum ad animi assumenda veniam dignissimos, neque unde minus modi cupiditate ipsum est doloribus voluptatibus, a sunt.",
+      lang: "ar",
+      image: "/images/6677171b-3b16-4305-bd9e-01e44bc8987e.jpg"
+    },
+]);
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
   const [deletionModal, setDeletionModal] = useState<boolean>(false);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const res = await fetch("/api/posts");
-      if (res.ok) setPosts(await res.json());
-    };
-    fetchPosts();
-  }, []);
 
   const handleDeleteSubmit = async () => {
     if (!selectedPost) return;
@@ -136,7 +161,3 @@ export default function Posts({ manage }: { manage?: boolean }) {
     </div>
   );
 }
-
-//contact & about
-//search bar
-//social media: linkedin, instagram, facebook, x
